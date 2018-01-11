@@ -1,0 +1,62 @@
+body {
+	background-color: black;
+}
+
+#pong-back {
+	cursor: pointer;
+	position:absolute;
+	left:2%;
+	top:2px;
+	font-size:50px;
+	color:#ABFFFA;
+}
+
+#pong-header {
+	position:absolute;
+	left:45%;
+	top:10px;
+	font-size:70px;
+	color:#ABFFFA;
+}
+
+#pong-header-score-1 {
+	position:absolute;
+	left:30px;
+	top:80px;
+	color:#ABFFFA;
+}
+
+#pong-header-score-2 {
+	position:absolute;
+	right:30px;
+	top:80px;
+	color:#ABFFFA;
+}
+
+#pong-1 {
+	position:absolute;
+	left:0px;
+	top:460px;
+	width:10px;
+	height:150px;
+	background-color:#ABFFFA;
+}
+
+#pong-2 {
+	position:absolute;
+	right:0px;
+	top:460px;
+	width:10px;
+	height:150px;
+	background-color:#ABFFFA;
+}
+
+#pong-3 {
+	position:absolute;
+	left:48%;
+	top:45%;
+	width:25px;
+	height:25px;
+	background-color: #F4524F;
+	border-radius:50%;
+}

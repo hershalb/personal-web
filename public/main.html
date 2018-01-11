@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head 
+         content must come *after* these tags -->
+    <title>Hershal Bhatia</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/pong.css" rel="stylesheet">
+    <link href="css/memory.css" rel="stylesheet">
+    <link href="css/blackjack.css" rel="stylesheet">
+    <link href="css/asteroids.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <script src="/js/pong.js"></script>
+    <script src="/js/memory.js"></script>
+    <script src="/js/blackjack.js"></script>
+    <script src="/js/asteroids.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+    <script src="bower_components/typed.js/js/typed.js"></script>
+    <script src="bower_components/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+</head>
+
+<body style="position: relative; left: 0;">
+
+    <div id="firstcontainer" class="container">
+        <div id="name">
+        <a><span id="H" class="letter" href="about.html">H</span></a>
+        <a><span id="E" class="letter" href="gameroom.html">e</span></a>
+        <a><span id="R"class="letter">r</span></a>
+        <a><span id="S"class="letter">s</span></a>
+        <a><span id="H2"class="letter" href="https://medium.com/@hershybateea">h</span></a>
+        <a><span id="A"class="letter">a</span></a>
+        <a><span id="L"class="letter" href="contact.html">l</span></a>
+        <p class="loginSeparator"><span> <i id="infoText">Hover over the letters for more information</i> </span></p>
+        </div>
+    </div>
+
+    <div id="secondcontainer" class="container">
+      <div class="chart">
+        <div class="stat active"><div class="info">Age </div><div class="quant age"></div><span class="num"><span></div>
+        <div class="stat"><div class="info">Frameworks </div><div class="quant frameworks"></div><span class="num"><span></div>
+        <div class="stat"><div class="info">Languages </div><div class="quant languages"></div><span class="num"><span></div>
+        <div class="stat"><div class="info">Games </div><div class="quant games"></div><span class="num"><span></div>
+        <div class="stat"><div class="info">Deployment </div><div class="quant deployment"></div><span class="num"><span></div>
+        <!-- <div class="stat"><div class="info">Years Coding: </div></div> -->
+      </div>
+      <div class="note-holder">
+        <span class="title"></span><span class="colon">_</span><span class="uphold">_</span>
+        <div class="notes">
+          <ul class="no-bulleted">
+            <li class="bullet"></li>
+          </ul>
+          <ul class="bulleted">
+            <li class="bullet"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="v-line v-line-1">
+        <div class="chat-info">
+          <div class="chat-info-header">Common Topics</div>
+          <ul class="chat-info-topic">
+            <li class="topic" onclick="fillInMessage('Show me frameworks')">Frameworks</li>
+            <li class="topic" onclick="fillInMessage('Show me Deployment')">Deployment</li>
+            <li class="topic" onclick="fillInMessage('Show me Games')">Games</li>
+            <li class="topic" onclick="fillInMessage('Show me Background')">Background</li>
+            <li class="topic" onclick="fillInMessage('Show me Languages')">Languages</li>
+            <li class="topic" onclick="fillInMessage('Play some music')">Music</li>
+            <li class="topic" onclick="fillInMessage('Go to the next page')">Next Page</li>
+          </ul>
+        </div>
+        <div class="chat-holder">
+          <div class="chat-messages" id="messages"></div>
+          <div class="chat-input">
+            <input id="message" onkeydown="checkNewMessage(event, this)" type="text" class="text-input" 
+            placeholder="Type a message..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type a message...'">
+          </div>
+        </div>
+      </div>
+      <div class="chat-opener">Jarvis can Help!</div>
+      <div class="circle-holder">
+        <div class="outer-circle-1"></div>
+        <div class="outer-circle-2"></div>
+        <div class="inner-circle"></div>
+        <div class="month"></div>
+        <div class="day"></div>
+      </div>
+      <div class="music-bar-holder">
+        <div class="music-bar" id="music-bar">
+          <div class="music-text">
+            <div id="stream" class="stream"><i class="fa fa-play fa-lg" aria-hidden="true"></i></div>
+            <div id="stop_stream" class="stream"><i class="fa fa-pause fa-lg" aria-hidden="true"></i></div>
+            <div id="prev_stream" class="stream"><i class="fa fa-backward fa-lg" aria-hidden="true"></i></div>
+            <div id="next_stream" class="stream"><i class="fa fa-forward fa-lg" aria-hidden="true"></i></div>
+            Now Playing: <span id="current_song"></span>
+            <!-- <audio id="player" preload autobuffer crossorigin="anonymous"></audio> -->
+            <div id="uplayer"></div>
+          </div>
+        </div>
+      </div>
+      <div id="nextbar"></div>
+    </div>
+    <div id="thirdcontainer" class="container">
+      <div id="thirdFirst" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                  <span class="game-name"></span>
+                  <div class="page-header-div">
+                    <span id="page-header-game">GAME</span>
+                    <span id="page-header-room">ROOM</span>
+                  </div>
+                </h1>
+            </div>
+            <div class="col-xs-8 col-xs-offset-2 game-container">
+              <div class="thumb">
+                  <a id="pong-image" href="#">
+                      <img class="img-responsive" src="./Pong.png" alt="">
+                  </a>
+                  <p class="caption">Pong</p>
+              </div>
+              <div class="thumb">
+                  <a id="memory-image" href="#">
+                      <img class="img-responsive" src="./Memory.png" alt="">
+                  </a>
+                  <p class="caption">Memory</p>
+              </div>
+              <div class="thumb">
+                  <a id="blackjack-image" href="#">
+                      <img class="img-responsive" src="./Blackjack.png" alt="">
+                  </a>
+                  <p class="caption">Blackjack</p>
+              </div>
+              <div class="thumb">
+                  <a id="asteroid-image" href="#">
+                      <img class="img-responsive" src="./Asteroid.png" alt="">
+                  </a>
+                  <p class="caption">Asteroid</p>
+              </div>
+              <div class="thumb">
+                  <a href="#">
+                      <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <p class="caption">Pong</p>
+              </div>
+              <div class="thumb">
+                  <a href="#">
+                      <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <p class="caption">Pong</p>
+              </div>
+              <div class="thumb">
+                  <a href="#">
+                      <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <p class="caption">Pong</p>
+              </div>
+              <div class="thumb">
+                  <a id="nextPage-image" href="#">
+                      <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <p class="caption">Pong</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pong-body">
+            <h1 id="pong-back">Back</h1>
+            <h1 id="pong-header">Pong</h1>
+            <h1 id="pong-header-score-1">Score 1: <span id="pong-score1">0</span></h1>
+            <h1 id="pong-header-score-2">Score 2: <span id="pong-score2">0</span></h1>
+            <hr style="margin-top:150px;">
+            <div id="pong-1"></div>
+            <div id="pong-3"></div>
+            <div id="pong-2"></div>
+        </div>
+        <div class="memory-body">
+            <h1 id="memory-back">Back</h1>
+            <h1 id="memory-header">Memory</h1>
+            <h1 id="memory-header-score-1">Turns: <span id="memory-score1">0</span></h1>
+            <hr style="margin-top:150px;">
+            <div class="memory-game">
+                <div class="memory-card" id="1"></div>
+                <div class="memory-card" id="2"></div>
+                <div class="memory-card" id="3"></div>
+                <div class="memory-card" id="4"></div>
+                <div class="memory-card" id="5"></div>
+                <div class="memory-card" id="6"></div>
+                <div class="memory-card" id="7"></div>
+                <div class="memory-card" id="8"></div>
+                <div class="memory-card" id="9"></div>
+                <div class="memory-card" id="10"></div>
+                <div class="memory-card" id="11"></div>
+                <div class="memory-card" id="12"></div>
+                <div class="memory-card" id="13"></div>
+                <div class="memory-card" id="14"></div>
+                <div class="memory-card" id="15"></div>
+                <div class="memory-card" id="16"></div>
+                <div class="memory-card" id="17"></div>
+                <div class="memory-card" id="18"></div>
+                <div class="memory-card" id="19"></div>
+                <div class="memory-card" id="20"></div>
+            </div>
+        </div>
+        <div class="blackjack-body">
+            <h1 id="blackjack-back">Back</h1>
+            <h1 id="blackjack-header">Blackjack</h1>
+            <hr style="margin-top:150px;">
+            <div class="blackjack-game">
+                <button class="bjButton" onclick="deal()">DEAL</button>
+                <button class="bjButton" onclick="hit()">HIT</button>
+                <button class="bjButton" onclick="stand()">STAND</button>
+            </div>
+            <div class="blackjack-game">
+                <h1 id="blackjack-header-score-1">Score: <span id="blackjack-score1">0</span></h1>
+                <img id="blackjack-cardimage" src="../cards_jfitz.png" alt="">
+                <div id="blackjack-playerhand">
+                    <h1 class="blackjack-carddesc">Player Hand: <span id="bjptotal"></span></h1>
+                    <canvas class="blackjack-cards" id="blackjack-playerhand1" width="1000" height="192"></canvas>
+                </div>
+                <h1 class="blackjack-quest" id="outcome">Hit or Stand?</h1>
+                <div id="blackjack-dealerhand">
+                    <h1 class="blackjack-carddesc">Dealer Hand</h1>
+                    <canvas class="blackjack-cards" id="blackjack-dealerhand1" width="1000" height="192"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="asteroids-body" id="asteroids">
+            <h1 id="asteroids-back">Back</h1>
+            <h1 id="asteroids-header">Asteroids</h1>
+            <hr style="margin-top:150px;">
+            <canvas id="asteroid-canvas"></canvas>
+            <!-- <img src="../../Ship.png" alt="Ship" id="ship-img"> -->
+        </div>
+    </div>
+    <div id="fourthcontainer">
+      Hello this is the fourth container.
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+</body>
+
+<script>
+var aboutChart = 80;
+var aboutNums = 40;
+var frameworks = 13;
+var languages = 9;
+var games = 7;
+var deployment = 7;
+var born = new Date("January 15, 1997 6:00:00");
+var today = new Date();
+var firstText = "Hover over the letters for more information";
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+$(document).ready(function(){
+    $(".letter").hide(0).delay(500).fadeIn(500)
+    $(".loginSeparator").hide(0).delay(500).fadeIn(1000);
+});
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var query = getParameterByName('comp', null);
+
+// Information for H.
+$("#H").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Hear all about who I am.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for E.
+$("#E").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Enter the game room and check out games I've built.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for R
+$("#R").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Read all about the projects I've worked on.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for S
+$("#S").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Stroll through my very own interactive resume.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for H2
+$("#H2").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Hang around, and read my blog.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for A
+$("#A").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Appraise my computer science tutorials.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+// Information for L
+$("#L").hover(function () {
+  $('#infoText').stop()
+   $('#infoText').hide(0)
+   $('#infoText').text("Leave me your contact info, I'd love to get to know you better.");
+   $('#infoText').fadeIn(200);
+}, function () {
+   $('#infoText').text(firstText);
+});
+$('#H').click(function() {
+  moveToSecond();
+});
+
+$(".chat-opener").click(function() {
+  jarvisCanHelp();
+})
+
+function moveToSecond() {
+  $("#firstcontainer").addClass("zoom-out");
+  // $("#secondcontainer").addClass("zoom-out");
+  $("#secondcontainer").show(0);
+  $("#secondcontainer").css("transform", "scale(0.8)");
+  if (event) {
+    event.preventDefault();
+  }
+  setTimeout(function() {
+    $("html, body").animate({
+      scrollTop: $("#secondcontainer").offset().top
+    }, 500, 'swing', function() {
+      $(".chart").css("display", "block");
+      // $("#secondcontainer").removeClass("zoom-out");
+      // $("#secondcontainer").css("transform", "scale(1)")
+      // $("#secondcontainer").css("transform", "scale(1)");
+      setTimeout(function() {$("#secondcontainer").addClass("zoom-in");$("#secondcontainer").css("transform", "scale(1)");}, 500);
+      $(".note-holder").css("display", "block");
+      $(".circle-holder").show(100);
+      $(".chat-opener").fadeIn(100);
+      $(".v-line").delay(800).show(100);
+      $(".music-bar-holder").delay(900).fadeIn(200);
+      $("#nextbar").delay(1000).fadeIn(300);
+      setTimeout(function() {circle.animate(0);}, 1200);
+      whichShow(current);
+      console.log($("#secondcontainer").offset().top);
+      // $(".v-line").css("display", "block");
+      $("#firstcontainer").css("display", "none");
+    })}, 200);
+}
+
+function moveToThird() {
+  $("#secondcontainer").css("transform", "scale(0.8)");
+  // $("#secondcontainer").addClass("move-second");
+  // $("#thirdcontainer").addClass("move-second");
+  $("#thirdcontainer").show(0);
+  $("#page-header-game").hide(0);
+  $("#page-header-room").hide(0);
+  // var amount = $("#thirdcontainer").offset().left;
+  $("#thirdcontainer").css("transform", "translateX(100%) translateY(-100%)");
+  var amount = window.outerWidth;
+  $('#pong-image').click(function() {
+    $('#thirdFirst').hide(1000);
+    $('.pong-body').show(1000);
+    // console.log(pongStart);
+    setTimeout(function() {
+      pongStart();
+      pongBall();
+    }, 1500);
+  });
+  $('#memory-image').click(function() {
+    $('#thirdFirst').hide(1000);
+    $('.memory-body').show(1000);
+    // console.log(pongStart);
+    setTimeout(function() {
+      memoryFirst();
+    }, 1500);
+  });
+  $('#blackjack-image').click(function() {
+    $('#thirdFirst').hide(1000);
+    $('.blackjack-body').show(1000);
+    setTimeout(function() {
+      blackjackStart();
+      deal();
+    }, 1500);
+  });
+  $('#asteroid-image').click(function() {
+    $('#thirdFirst').hide(1000);
+    $('.asteroids-body').show(1000);
+    setTimeout(function() {
+      asteroidsInit();
+      deal();
+    }, 1500);
+  });
+  $('#nextPage-image').click(function() {
+    moveToFourth();
+  });
+  $('#pong-back').click(function() {
+    $('.pong-body').hide(1000);
+    $('#thirdFirst').show(1000);
+    pongStop();
+    clearInterval(pongList);
+  });
+  $('#memory-back').click(function() {
+    $('.memory-body').hide(1000);
+    $('#thirdFirst').show(1000);
+  });
+  $('#blackjack-back').click(function() {
+    $('.blackjack-body').hide(1000);
+    $('#thirdFirst').show(1000);
+    blackjackStop();
+  });
+  $('#asteroids-back').click(function() {
+    $('.asteroids-body').hide(1000);
+    $('#thirdFirst').show(1000);
+    clearInterval(asteroidShow);
+    asteroidsStop();
+  });
+  // event.preventDefault();
+  setTimeout(function() {
+    $("html, body").animate({
+      scrollLeft: amount
+    }, 500, 'swing', function() {
+      $("#thirdcontainer").css("transform", "");
+      console.log("called")
+      $(function() {
+        var options = {
+          strings: ["Hershal's"],
+          typeSpeed: 0,
+          showCursor: false,        }
+        $(".game-name").typed(options);
+      });
+      $("#page-header-game").delay(400).show(100);
+      $("#page-header-room").delay(800).show(100);
+      $("#secondcontainer").hide(0);
+    })}, 200);
+}
+
+function moveToFourth() {
+  $("#thirdcontainer").css("transition", "ease-in-out 1s");
+  $("#thirdcontainer").css("transform", "translateX(-135%) translateY(-60%) scale(6)");
+  setTimeout(function() {
+    $("#thirdcontainer").hide(0);
+    $("#fourthcontainer").css("transform", "scale(5)");
+    $("#fourthcontainer").show(0);
+    $("#fourthcontainer").css("transform", "scale(1)");
+  }, 1000);
+}
+
+function jarvisCanHelp() {
+  $(".circle-holder").hide(200);
+  $(".chat-opener").fadeOut(200);
+  $(".chat-info-header").show(100);
+  var myColors = [
+    '#e8720b', '#99d242', '#41d185', '#8441d1', '#d14190'
+  ];
+  $(".v-line").animate({width: "37%"}, 500);
+  // $(".topic").animate({width: "100%"}, 300);
+  $(".chat-info").css("display", "inline");
+  $(".chat-holder").css("display", "inline");
+  $(".chat-messages").show(100);
+  $(".chat-input").show(100);
+  $(".topic").show(300);
+  var i = 0;
+  $('.topic').each(function() {
+      // $(this).css('background-color', myColors[i]);
+      $(this).hover(function(e) {$(this).css('background-color', $(this).css('border-color'))}, function(e) {$(this).css('background-color', 'black')});
+      $(this).css('border', "5px solid " + myColors[i]);
+      i = (i + 1) % myColors.length;
+  });
+  sendChatRequest('', null);
+}
+
+function fillInMessage(message) {
+  // create fake function to send to server.
+  e = {keyCode : 13};
+  box = {value : message};
+  checkNewMessage(e, box);
+}
+
+$('#E').click(function() {
+
+if (event) {
+  event.preventDefault();
+}
+
+// newLocation = $('#E').attr('href');
+// p = $( "#name" );
+// $("body").animate({
+//     opacity: 0,
+//     top: "-=" + (p.offset().top - 100),
+// }, 500, newpage);
+// $('body').fadeOut(100, newpage);
+moveToSecond();
+setTimeout(function() {console.log('thiriririririd'); moveToThird();}, 2000);
+
+});
+$('#H2').click(function() {
+
+event.preventDefault();
+
+newLocation = $('#H2').attr('href');
+newpage();
+
+});
+
+$('#L').click(function() {
+
+event.preventDefault();
+
+newLocation = $('#L').attr('href');
+newpage();
+
+});
+
+if (query === 'h') {
+  setTimeout(function() {
+    $("#H").click();
+  }, 500);
+}
+if (query === 'e') {
+  setTimeout(function() {
+    $("#E").click();
+  }, 500);
+}
+
+var aboutLoadTotal = today.getYear() - born.getYear();
+var frameworkRatio = frameworks / aboutLoadTotal * aboutChart;
+var languagesRatio = languages / aboutLoadTotal * aboutChart;
+var gamesRatio = games / aboutLoadTotal * aboutChart;
+var deploymentRatio = deployment / aboutLoadTotal * aboutChart;
+var ratio = aboutNums / aboutChart;
+var offset = 1.5;
+var repeats = 8;
+var starts = [0, 0, 0, 0, 0];
+var increments = [aboutLoadTotal / repeats, frameworks / repeats, languages / repeats, 
+                  games / repeats, deployment / repeats];
+var descriptions = { "Age" : 
+                      {"no" : 
+                        ["Age: 20", "Education: UC Berkeley", "Hobbies: Basketball and Dance", 
+                         "Favorite 'Food': Pizookie", "Comedian: Dave Chappelle",
+                         "Currently Watching: The Office", "Computer: Mac"],
+                       "yes" : 
+                        ["Currently attends UC Berkeley as a sophomore.", 
+                         "A superfan of Iron Man",
+                         "Created web, IOS, and android apps with React and React Native",
+                         "Full Stack Developer (MEAN)", "Has nice hair", "An avid learner.", 
+                         "Affectionate towards creating web applications.", "Sounds like a really smart guy."],
+                        "num" : 0,
+                      },
+                     "Frameworks" :
+                      {"no" : 
+                        [],
+                       "yes" : 
+                        ["ReactJS <ul class='other'><li><a href='https://artistry-15859.firebaseapp.com'>Artistry</a></li><li><a href='http://telelytics.io/'>Telelytics</a></li><li><a href='https://github.com/hershalb/React-Native-Yik-Yak'>Yik Yak</a></li></ul>", 
+                         "Flask <ul class='other'><li><a href='http://serene-oasis-5477.herokuapp.com/'>CheckIn</a></li></ul>",
+                         "Ruby on Rails <ul class='other'><li><a href='https://github.com/palmakkar/beatroot'>BeatRoot</a></li></ul>", 
+                         "d3.js <ul class='other'><li><a href='http://hershalb.github.io/app/'>Street Map</a></li></ul>",
+                         "NodeJS <ul class='other'><li>Coming Soon</li></ul>", 
+                         "AngularJS", "Bootstrap", "jQuery", "Redux", "Django", "EmberJS", "MongoDB", "Ionic"],
+                        "num" : 1,
+                      },
+                     "Languages" :
+                      {"no" : 
+                        [],
+                       "yes" : 
+                        ["JavaScript <ul class='no-other'><li>Level: <span class='strong'>Strong</span></li></ul>", 
+                         "Python <ul class='no-other'><li>Level: <span class='strong'>Strong</span></li></ul>", 
+                         "Java <ul class='no-other'><li>Level: <span class='strong'>Strong</span></li></ul>", 
+                         "HTML5 <ul class='no-other'><li>Level: <span class='strong'>Strong</span></li></ul>", 
+                         "CSS3 <ul class='no-other'><li>Level: <span class='strong'>Strong</span></li></ul>", 
+                         "C <ul class='no-other'><li>Level: <span class='well-versed'>Well-versed</span></li></ul>", 
+                         "MIPS <ul class='no-other'><li>Level: <span class='well-versed'>Well-versed</span></li></ul>", 
+                         "Ruby <ul class='no-other'><li>Level: <span class='familiar'>Familiar</span></li></ul>",  
+                         "SQL <ul class='no-other'><li>Level: <span class='familiar'>Familiar</span></li></ul>"],
+                        "num" : 2,
+                      },
+                     "Games" :
+                       {"no" :
+                        ["Continue to next page to receive full experience."],
+                        "yes" :
+                        ["Pong", "Memory", "Blackjack", "Physics", "Blackjack", "Asteroids", "2048", "Bot", "Coming Soon"],
+                        "num" : 3,
+                       },
+                     "Deployment" :
+                       {"no" :
+                        ["Knowledge of deployment tools and environments."],
+                        "yes" :
+                        ["Github", "AWS", "Heroku", "Ubuntu", "Nginx", "REST Integration", "Firebase"],
+                        "num" : 4,
+                       }
+                  };
+
+var ratios = [aboutChart, frameworkRatio, languagesRatio, gamesRatio, deploymentRatio];
+var ceiling = false;
+var nextBarProgress = false;
+
+window.onload = function expandAbout() {
+  var age = document.getElementsByClassName("age");
+  var frameworks = document.getElementsByClassName("frameworks");
+  var languages = document.getElementsByClassName("languages");
+  var games = document.getElementsByClassName("games");
+  var deployment = document.getElementsByClassName("deployment");
+  var num = document.getElementsByClassName("num");
+  var stats = document.getElementsByClassName("stat");
+  var colon = document.getElementsByClassName("colon");
+  var month = document.getElementsByClassName("month");
+  var day = document.getElementsByClassName("day");
+  console.log(stats);
+  var n = 0;
+  for (var i = 0; i < stats.length; i++) {
+    console.log(ratios[i] + "%");
+    stats[i].style.width = (ratios[i] + "%");
+    num[i].style.left = (ratios[i] * ratio + offset + "%");
+  }
+  interval = window.setInterval(
+    function() {
+        console.log('here');
+        for (var i = 0; i < num.length; i++) {
+            starts[i] += increments[i];
+            num[i].innerHTML = Math.round(starts[i]);
+        }
+        if (starts[0] == aboutLoadTotal) {
+          clearInterval(interval);
+        }
+    }, 50);
+  colonInterval = window.setInterval(
+    function() {
+        for (var i = 0; i < colon.length; i++) {
+            colon[i].innerHTML = (colon[i].innerHTML === "_") ? " " : "_";
+        }
+        // if (starts[0] == aboutLoadTotal) {
+        //   clearInterval(interval);
+        // }
+    }, 500);
+  for (var i = 0; i < month.length; i++) {
+    month[i].innerHTML = monthNames[today.getMonth()];
+    month[i].style.fontSize = today.getMonth() >= 9 ? "230%" : "300%";
+  }
+  for (var i = 0; i < day.length; i++) {
+    day[i].innerHTML = today.getDate();
+  }
+
+  window.addEventListener("click", function(e) {console.log(e);})
+}
+
+// $(document).ready(
+//   function () {
+//     console.log('here')
+//     // Grab sound object of stream
+//     SC.stream(TRACK, function(sound){
+//       console.log(sound)
+//       sound.play();
+//     });
+//   }
+// );
+
+// $("#stream").click(function(e){
+//   console.log('play')
+//   e.preventDefault();
+//   SC.stream("/tracks/293", {autoPlay: true});
+// });
+
+var current = "Age";
+var text = []
+var amountScrolled = 0;
+var intervalStarted = false;
+
+$('#secondcontainer').bind('mousewheel', function(e){
+  if (e.originalEvent.wheelDeltaY < 0 && amountScrolled <= 300) {
+    amountScrolled += 5;
+    if (!intervalStarted) {
+        intervalStarted = true;
+        nextPageInterval = window.setInterval(
+          function() {
+              amountScrolled -= 15;
+              if (amountScrolled <= 0) {
+                amountScrolled = 0;
+                intervalStarted = false;
+                clearInterval(nextPageInterval);
+              }
+              updateCircle();
+          }, 100);
+    }
+    updateCircle();
+  }
+
+});
+
+
+
+function changeStats(element) {
+  var newText = element.children(".info").text().trim();
+  // console.log(newText);
+  if (current !== newText) {
+    current = newText;
+    newText = newText === "Age" ? "Background" : newText;
+    // console.log($(this).children(".info").text());
+    text = [newText];
+    changeText();
+    $(".active").removeClass('active');
+    element.addClass('active');
+    var el = $(".notes"),  
+    newone = el.clone(true);
+    el.before(newone);
+    $("." + el.attr("class") + ":last").remove();
+    whichShow(current);
+    //.removeClass(".notes").addClass(".notes");
+    // colonOn = true;
+  }
+}
+
+$('.stat').hover(
+     function(){ changeStats($(this)) }, function(){}
+);
+
+$(function(){
+  $(".title").typed({
+      strings: ["Background"],
+      typeSpeed: 0,
+      showCursor: false,
+  });
+});
+
+function changeText() {
+ $(function() {
+      var options = {
+        strings: text,
+        typeSpeed: 0,
+        showCursor: false,
+      }
+      $(".title").typed(options);
+  });
+
+}
+
+function whichShow(type) {
+  $(".no-bulleted").empty();
+  $(".bulleted").empty();
+  var nos = descriptions[type]["no"];
+  var yes = descriptions[type]["yes"];
+  for (var i = 0; i < nos.length; i++) {
+    $( ".no-bulleted" ).append( "<li class='" + type + '-no-' + i + "'></li>" );
+    $("." + type + '-no-' + i).typed({
+        strings: [nos[i]],
+        typeSpeed: -100,
+        startDelay: 500,
+        showCursor: false,
+    });
+  }
+  for (var i = 0; i < yes.length; i++) {
+    $( ".bulleted" ).append( "<li class='" + type + '-yes-' + i + "'></li>" );
+    $("." + type + '-yes-' + i).typed({
+        strings: [yes[i]],
+        typeSpeed: -100,
+        startDelay: 500,
+        showCursor: false,
+    });
+  }
+}
+
+var circle = new ProgressBar.SemiCircle('#nextbar', {
+    strokeWidth: 10,
+    color: '#02FAF4',
+    duration: 2000,
+    trailColor: '#90a9c3',
+    easing: 'easeInOut',
+    text: {
+      value: 'Scroll to move on',
+      alignToBottom: false
+    },
+    from: {color: '#02FAF4'},
+    to: {color: '#F4524F'},
+    step: (state, bar) => {
+      bar.path.setAttribute('stroke', state.color);
+    // var value = Math.round(bar.value() * 100);
+      var word = 'Scroll to move on ';
+      if (amountScrolled > 0) {
+        word = "Game Room "
+      }
+      bar.setText(word + Math.round(amountScrolled/300*100) + "%");
+    }
+});
+
+circle.set(1);
+
+function updateCircle() {
+  if (!nextBarProgress) {
+    circle.set(amountScrolled / 300);
+  }
+  if (amountScrolled >= 300 && !nextBarProgress) {
+    moveToThird();
+    nextBarProgress = true;
+  }
+}
+
+
+// var bar = new ProgressBar.SemiCircle(nextbar, {
+//   strokeWidth: 6,
+//   color: '#FFEA82',
+//   trailColor: '#eee',
+//   trailWidth: 1,
+//   easing: 'easeInOut',
+//   duration: 1400,
+//   svgStyle: null,
+//   text: {
+//     value: 'Hello',
+//     alignToBottom: false
+//   },
+//   from: {color: 'green'},
+//   to: {color: '#ED6A5A'},
+//   // Set default step function for all animate calls
+//   step: (state, bar) => {
+//     bar.path.setAttribute('stroke', state.color);
+//     // var value = Math.round(bar.value() * 100);
+//     // if (value === 0) {
+//     //   bar.setText('');
+//     // } else {
+//     //   bar.setText(value);
+//     // }
+
+//     bar.text.style.color = state.color;
+//   }
+// });
+// bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+circle.text.style.fontSize = '2rem';
+// bar.animate(amountScrolled / 500);
+
+// Age : 19
+// Education : UC Berkeley
+// Hobbies : Basketball, Dancing, Coding
+
+function newpage() {
+window.location = newLocation;
+
+}
+
+var allMessages = [];
+var chatInformation;
+var sentInformation
+var messageEndpoint = '/api/message';
+
+console.log('here');
+
+function checkNewMessage(event, box) {
+  if (event.keyCode === 13 && box.value) {
+    if (chatInformation) {
+      updateMessages(box.value, true);
+      sendChatRequest(box.value, chatInformation.context);
+    }
+    box.value = '';
+  }
+}
+
+function updateMessages(output, user) {
+  var type = user ? "user" : "watson";
+  var text = user ? output : output.output.text;
+  allMessages.push(text);
+  $( ".chat-messages" ).append( "<div class='messageContainer'><div class='" + type + "' ><div class='messages' >" + text + "</div></div></div>" );
+  var messages = document.getElementById("messages");
+  messages.scrollTop = messages.scrollHeight;
+
+  // <div key={key} className="messageContainer">  
+  //   <div className={className}>
+  //     {addName ? <p style={{color: "lightgray"}}>{message.name}</p> : null}
+  //     <div className="message">{message.message}</div>
+  //   </div>
+  // </div>
+  // var scrollingChat = document.getElementsByClassName('.chat-messages');
+
+  // // Scroll to the latest message sent by the user
+  // var scrollEl = scrollingChat.querySelector(settings.selectors.fromUser
+  //         + settings.selectors.latest);
+  // if (scrollEl) {
+  //   scrollingChat.scrollTop = scrollEl.offsetTop;
+  // }
+}
+
+// Send a message request to the server
+function sendChatRequest(text, context) {
+  // Build request payload
+  var payloadToWatson = {};
+  console.log(text);
+  console.log(context);
+  if (text) {
+    payloadToWatson.input = {
+      text: text
+    };
+  }
+  if (context) {
+    payloadToWatson.context = context;
+  }
+  // Built http request
+  var http = new XMLHttpRequest();
+  http.open('POST', messageEndpoint, true);
+  http.setRequestHeader('Content-type', 'application/json');
+  http.onreadystatechange = function() {
+    if (http.readyState === 4 && http.status === 200 && http.responseText) {
+      chatInformation = JSON.parse(http.response);
+      console.log(chatInformation);
+      updateMessages(chatInformation, false);
+      manageResults(chatInformation);
+    }
+  };
+
+  var params = JSON.stringify(payloadToWatson);
+  // Stored in variable (publicly visible through Api.getRequestPayload)
+  // to be used throughout the application
+  if (Object.getOwnPropertyNames(payloadToWatson).length !== 0) {
+    sentInformation = JSON.parse(params);
+  }
+
+  // Send request
+  http.send(params);
+}
+
+function manageResults(info) {
+  var num;
+  if (info.entities && info.intents) {
+    console.log('first');
+    console.log(info.intents[0]);
+    if (info.intents[0].intent === "turn_on") {
+      console.log('second');
+      if (info.entities[0].value === "music") {
+        console.log('play video');
+        startSong.target.playVideo();
+      } else if (descriptions[info.entities[0].value]) {
+        num = descriptions[info.entities[0].value].num;
+        var infoBar = $($('.stat')[num]);
+        // console.log(infoBar);
+        changeStats(infoBar)
+      }
+    } else if (info.intents[0].intent === "turn_off") {
+      if (info.entities[0].value === "music") {
+        console.log('pause video');
+        startSong.target.pauseVideo();
+      }
+    } else if (info.intents[0].intent === "next") {
+      if (info.entities[0].value === "page") {
+        moveToThird();
+      } else if (info.entities[0].value === "music") {
+        startSong.target.nextVideo();
+      }
+    } else if (info.intents[0].intent === "previous") {
+      if (info.entities[0].value === "music") {
+        startSong.target.previousVideo();
+      }
+    }
+  }
+}
+
+</script>
+<script>
+// SC.initialize({
+//   client_id: 'p5Q1cfbPt32XR5yLjA6vzobEaovOLYY4'
+// });
+
+// var track_url = 'http://soundcloud.com/forss/flickermood';
+// SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+//   console.log('oEmbed response: ', oEmbed);
+// });
+SC.initialize({
+  client_id: 'p5Q1cfbPt32XR5yLjA6vzobEaovOLYY4'
+});
+
+var track_url = 'https://soundcloud.com/g-eazy/some-kind-of-drug-earwulf';
+SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+  console.log('oEmbed response: ', oEmbed);
+  document.getElementById("music").appendChild(oEmbed.html);
+});
+var song = '/tracks/291559463'
+SC.stream(song).then(function(player){
+  console.log('player response', player);
+  console.log(player.options.streamUrlsEndpoint);
+  document.getElementById("player").src = "https://api.soundcloud.com/tracks/291559463/stream?client_id=p5Q1cfbPt32XR5yLjA6vzobEaovOLYY4";
+  // src="https://api.soundcloud.com/tracks/241280477/stream?client_id=8214b362bafcc90d268a35aa7d6de6e0"
+});
+
+// stream track id 293
+// $("#stream").live("click", function(){
+//   SC.stream("/tracks/293", {autoPlay: true});
+// });
+</script>
+
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  var list_id = "RDMMFG9M0aEpJGE"// "RDMMcqTrC1fEnUk"
+  var index = Math.floor(Math.random() * 20);
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('uplayer', {
+      height: '1',
+      width: '1',
+      // keep height and width at 1 because at 0 skip and prev don't work.
+      // videoId: "1IqdF7Qhp3o",
+      // below absolutely nec. for function.
+      playerVars : {
+        listType: "playlist",
+        list: list_id,
+        // index: index,
+      },
+      // loadPlaylist: list_id,
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    // player.loadPlaylist(list_id)
+  }
+
+  var startSong;
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    console.log('onplayerready called.');
+    // console.log(index);
+    // have both this and the playerVars variable above.
+    event.target.cuePlaylist({listType: "playlist", 
+                               list: list_id, 
+                               index: index});
+    event.target.setLoop(true);
+    startSong = event;
+    $('#stream').click(function(){ event.target.playVideo();  });
+    $('#stop_stream').click(function(){ event.target.pauseVideo() });
+    $('#prev_stream').click(function(){ event.target.previousVideo() });
+    $('#next_stream').click(function(){console.log('clicked!'); event.target.nextVideo() });
+    window.setInterval(function() {updateProgress(event.target)}, 1000);
+    // console.log(event.target);
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    // if (event.data == YT.PlayerState.PLAYING && !done) {
+    //   setTimeout(stopVideo, 6000);
+    //   done = true;
+    // }
+    document.getElementById("current_song").innerHTML = event.target.getVideoData().title;
+    updateProgress(event.target);
+    console.log('updated');
+
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
+
+//UPDATE PROGRESS BAR
+function updateProgress(player) {
+   var progress = $("#music-bar");
+   var value = 0;
+
+   //If duration = infinity set value to 100
+
+   if(player.getCurrentTime() >= player.getDuration())
+   {
+      value = 100;
+   }
+   //else if it is > 0 calculate percentage to highlight
+
+   else if (player.getCurrentTime() > 0) {
+      value = Math.floor(100 * player.getCurrentTime() / player.getDuration());
+   }
+
+   //set the width of the progress bar
+
+   progress.stop().css({'width':value + '%'},500);
+
+   //console.log("time in song: ", player.getVideoLoadedFraction());
+   //console.log("time in song: ", value);
+
+   //set the new timestamp
+   // $('#time').html(formatTime(player.currentTime))
+}
+
+// add event listener for audio time updates
+//player.addEventListener("timeupdate", updateProgress, false);
+</script>
+
+</html>

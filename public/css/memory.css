@@ -1,0 +1,51 @@
+#memory-back {
+	cursor: pointer;
+	position:absolute;
+	left:2%;
+	top:2px;
+	font-size:50px;
+	color:#ABFFFA;
+}
+
+#memory-header {
+	position:absolute;
+	left:42%;
+	top:10px;
+	font-size:70px;
+	color:#ABFFFA;
+}
+
+#memory-header-score-1 {
+	position:absolute;
+	left:30px;
+	top:80px;
+	color:#ABFFFA;
+}
+
+.memory-game {
+	vertical-align: middle;
+	padding-top: 7%;
+	padding-left: 22%;
+	padding-right: 22%;
+	margin: 0 auto;
+}
+
+.memory-num {
+	color: #ABFFFA;
+	vertical-align: middle;
+	padding-top: 40px;
+	font-size: 1000%;
+}
+
+.memory-card {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ABFFFA;
+	cursor: pointer;
+	display: inline-block;
+	height: 200px;
+	width: 100px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

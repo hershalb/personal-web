@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'assets' ]
+2 info using npm@3.10.3
+3 info using node@v7.10.0
+4 verbose run-script [ 'preassets', 'assets', 'postassets' ]
+5 info lifecycle hershal-website@0.0.0~preassets: hershal-website@0.0.0
+6 silly lifecycle hershal-website@0.0.0~preassets: no script for preassets, continuing
+7 info lifecycle hershal-website@0.0.0~assets: hershal-website@0.0.0
+8 verbose lifecycle hershal-website@0.0.0~assets: unsafe-perm in lifecycle true
+9 verbose lifecycle hershal-website@0.0.0~assets: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/sunil/Documents/College/website/node_modules/.bin:/usr/local/bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/sunil/Documents/College/website/node_modules/.bin:/usr/local/bin:/Users/sunil/anaconda3/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/sunil/.rbenv/shims:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Users/sunil/.rvm/gems/ruby-2.3.0/bin:/Users/sunil/.rvm/gems/ruby-2.3.0@global/bin:/Users/sunil/.rvm/rubies/ruby-2.3.0/bin:/usr/local/share/python3:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/Downloads/mongodb-osx-x86_64-enterprise-3.2.10/bin:/usr/local/go/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS::/Users/sunil/.rvm/bin:/Users/sunil/.rvm/bin
+10 verbose lifecycle hershal-website@0.0.0~assets: CWD: /Users/sunil/Documents/College/website
+11 silly lifecycle hershal-website@0.0.0~assets: Args: [ '-c', 'webpack -w --display-max-modules 0' ]
+12 silly lifecycle hershal-website@0.0.0~assets: Returned: code: 255  signal: null
+13 info lifecycle hershal-website@0.0.0~assets: Failed to exec assets script
+14 verbose stack Error: hershal-website@0.0.0 assets: `webpack -w --display-max-modules 0`
+14 verbose stack Exit status 255
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:194:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:194:7)
+14 verbose stack     at maybeClose (internal/child_process.js:899:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid hershal-website@0.0.0
+16 verbose cwd /Users/sunil/Documents/College/website
+17 error Darwin 16.7.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "assets"
+19 error node v7.10.0
+20 error npm  v3.10.3
+21 error code ELIFECYCLE
+22 error hershal-website@0.0.0 assets: `webpack -w --display-max-modules 0`
+22 error Exit status 255
+23 error Failed at the hershal-website@0.0.0 assets script 'webpack -w --display-max-modules 0'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the hershal-website package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     webpack -w --display-max-modules 0
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs hershal-website
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls hershal-website
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

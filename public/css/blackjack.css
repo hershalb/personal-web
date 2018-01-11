@@ -1,0 +1,89 @@
+body {
+	background-color: black;
+}
+
+#blackjack-back {
+	cursor: pointer;
+	position:absolute;
+	left:2%;
+	top:2px;
+	font-size:50px;
+	color:#ABFFFA;
+}
+
+#blackjack-header {
+	position:absolute;
+	left:42%;
+	top:10px;
+	font-size:70px;
+	color:#ABFFFA;
+}
+
+#blackjack-header-score-1 {
+	/*position:absolute;
+	left:30px;
+	top:80px;*/
+	color:#ABFFFA;
+}
+
+.blackjack-game {
+	/*padding-top: 7%;*/
+	display: inline-block;
+	padding-left: 22%;
+	padding-right: 22%;
+	margin: 0 auto;
+}
+
+.blackjack-num {
+	color: #ABFFFA;
+	vertical-align: middle;
+	padding-top: 40px;
+	font-size: 500%;
+}
+
+.bjButton {
+	cursor: pointer;
+	border-radius: 30px;
+	background-color: #ABFFFA;
+	color: black;
+	font-size: 200%;
+}
+
+/*.blackjack-cards {
+	border: 1px solid #ABFFFA;
+}*/
+
+.blackjack-carddesc {
+	color: #ABFFFA;
+}
+
+.blackjack-quest {
+	font-size: 300%;
+	padding-bottom: 50px;
+	color: #F4524F;
+}
+
+#blackjack-cardimage {
+	display: none;
+}
+#blackjack-playerhand {
+	padding-bottom: 70px;
+}
+/*
+#blackjack-dealerhand {
+	width: 144px;
+	height: 96px;
+	border: 1px solid #ABFFFA;
+}
+*/
+
+.blackjack-card {
+	border: 1px solid black;
+	background-color: #ABFFFA;
+	cursor: pointer;
+	display: inline-block;
+	height: 200px;
+	width: 100px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

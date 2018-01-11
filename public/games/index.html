@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <link href="blackjack.css" rel="stylesheet">
+</head>
+<body>
+<div class="blackjack-body">
+    <h1 id="blackjack-back">Back</h1>
+    <h1 id="blackjack-header">Blackjack</h1>
+    <hr style="margin-top:150px;">
+    <div class="blackjack-game">
+        <button class="bjButton" onclick="deal()">DEAL</button>
+        <button class="bjButton" onclick="hit()">HIT</button>
+        <button class="bjButton" onclick="stand()">STAND</button>
+    </div>
+    <div class="blackjack-game">
+        <h1 id="blackjack-header-score-1">Score: <span id="blackjack-score1">0</span></h1>
+        <img id="blackjack-cardimage" src="../cards_jfitz.png" alt="">
+        <div id="blackjack-playerhand">
+            <h1 class="blackjack-carddesc">Player Hand: <span id="bjptotal"></span></h1>
+            <canvas class="blackjack-cards" id="blackjack-playerhand1" width="1000" height="192"></canvas>
+        </div>
+        <h1 class="blackjack-quest" id="outcome">Hit or Stand?</h1>
+        <div id="blackjack-dealerhand">
+            <h1 class="blackjack-carddesc">Dealer Hand</h1>
+            <canvas class="blackjack-cards" id="blackjack-dealerhand1" width="1000" height="192"></canvas>
+        </div>
+    </div>
+</div>
+</body>
+</html>

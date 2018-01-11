@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head 
+         content must come *after* these tags -->
+    <title>Hershal Bhatia</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+    <link href="css/mystyles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+</head>
+
+<body id="gameroom" style="opacity: 0;position: relative; left: 0;">
+<!-- <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Hershal Bhatia</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li><a href="#"><span class= "glyphicon glyphicon-info-sign" aria-hidden="true"></span> About Me</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                         Projects <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://hershalb.github.io/Pong/" target="_blank">Pong</a></li>
+                            <li><a href="http://hershalb.github.io/Blackjack/" target="_blank">Blackjack</a></li>
+                            <li><a href="#">Asteroids</a></li>
+                            <li><a href="#">Bots</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Others</li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">Flask</a></li>
+                        </ul>
+                     </li>
+                    <li><a href="contactus.html"><i class= "fa fa-envelope-o"></i> Contact Me</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-social-icon btn-lg btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-lg btn-facebook" href="http://twitter.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-lg btn-github" href="http://twitter.com/"><i class="fa fa-github"></i></a>
+                </ul>
+            </div>
+            </div>
+        </nav> -->
+    <div id="firstcontainer" class="container">
+        <div id="name" style="margin-top: 50px;">
+        <a><span id="H" class="letter" style="font-size: 500%">H</span></a>
+        <a><span id="E" class="letter" style="font-size: 500%">e</span></a>
+        <a><span id="R"class="letter" style="font-size: 500%">r</span></a>
+        <a><span id="S"class="letter" style="font-size: 500%">s</span></a>
+        <a><span id="H2"class="letter" style="font-size: 500%">h</span></a>
+        <a><span id="A"class="letter" style="font-size: 500%">a</span></a>
+        <a><span id="L"class="letter" style="font-size: 500%">l</span></a>
+        <a><span id="'"class="letter" style="font-size: 500%">'</span></a>
+        <a><span id="S2"class="letter" style="font-size: 500%">s</span></a>
+        </div>
+        <div class="gameroom">
+        <span id="game">GAME</span><span id="room">ROOM</span>
+        </div>
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+</body>
+<script>
+$(document).ready(function() {
+
+$("#room").hide(0)
+$("body").animate({
+    opacity : 1,
+    top: "-=100",
+}, 200).delay(500);
+$("#game").animate({
+    fontSize : "-=3500%",
+}, 200);
+$("#room").delay(500).show(0).animate({
+    fontSize : "-=3500%",
+}, 200);
+});
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+/*body {
+	background-color: black;
+}
+
+#asteroids-back {
+	cursor: pointer;
+	position:absolute;
+	left:2%;
+	top:2px;
+	font-size:50px;
+	color:#ABFFFA;
+}
+
+.missile {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #ABFFFA;
+	border-radius: 50%;
+}
+
+#ship-img {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+#asteroids-header {
+	position:absolute;
+	left:42%;
+	top:10px;
+	font-size:70px;
+	color:#ABFFFA;
+}
+
+canvas {
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	border: 1px solid #ABFFFA;
+}*/
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Calibri", "System", monospace;
+    font-size: 14px;
+}
+
+div#asteroids {
+    margin: 50px auto;
+    width: 640px;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+div#asteroids > * {
+    color: #fff;
+}
+
+div#asteroids > div {
+    font-family: "System", monospace;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+
+div#asteroids > div > span {
+    float: right;
+    padding-left: 20px;
+}
+
+div#instructions {
+    width: 640px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
